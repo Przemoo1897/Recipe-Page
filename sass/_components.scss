@@ -1,0 +1,13 @@
+@use './colors' as *;
+
+.paragraph-heading {
+	font-family: 'Young Serif', serif;
+	padding-bottom: 0.5em;
+	color: $nutmeg;
+	font-size: 2.8rem;
+	font-weight: 300;
+}
+
+hr {
+	margin: 1.6em 0;
+}

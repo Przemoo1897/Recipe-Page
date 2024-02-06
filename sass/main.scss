@@ -1,0 +1,179 @@
+@use './colors' as *;
+@use './components' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	color: $wenge-brown;
+	background-color: $eggshell;
+	font-size: 1.6rem;
+}
+
+.recipe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__card {
+		width: 700px;
+		background-color: $white;
+		overflow: hidden;
+
+		&-img {
+			height: 250px;
+			width: 100%;
+			background-image: url(../img/image-omelette.jpeg);
+			background-position: center;
+			background-size: cover;
+		}
+
+		&-heading {
+			font-family: 'Young Serif', serif;
+			margin: 0.8em 0;
+			color: $dark-charcoal;
+			font-size: 2.8rem;
+		}
+
+		&-text {
+			font-size: 1.4rem;
+		}
+
+		&-preparation {
+			background-color: $rose-white;
+			border-radius: 20px;
+
+			li {
+				margin: 0 1.5em;
+				padding: 0.3em;
+			}
+			p {
+				margin-bottom: 0.5em;
+				color: $dark-raspberry;
+				font-size: 1.8rem;
+				font-weight: bold;
+			}
+		}
+
+		&-ingredients {
+			margin-top: 1.6em;
+
+			li {
+				margin: 0 1.4em;
+				padding: 0.3em 0.6em;
+			}
+		}
+
+		&-instructions {
+			li {
+				margin: 0 1.4em;
+				padding: 0.3em 0.6em;
+
+				&::marker {
+					color: $nutmeg;
+					font-weight: bold;
+				}
+			}
+		}
+
+		&-table {
+			p {
+				margin-bottom: 2em;
+			}
+
+			hr {
+				margin: 1em 0;
+			}
+
+			&-columns {
+				display: flex;
+
+				div {
+					padding-left: 2em;
+					width: 50%;
+				}
+				.second-column {
+					font-weight: bold;
+					color: $nutmeg;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1440px) {
+	.recipe {
+		&__card {
+			&-heading {
+				padding: 0 1em;
+			}
+
+			&-text {
+				padding: 0 2em;
+			}
+
+			&-preparation {
+				margin: 1.6em 1.8em;
+				padding: 1em 1em;
+			}
+
+			&-ingredients {
+				padding: 0 2em;
+			}
+
+			&-instructions {
+				padding: 0 2em;
+			}
+
+			&-table {
+				padding: 0 2em 2em 2em;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.recipe {
+		&__card {
+			margin: 5em 0 5em 0;
+			padding: 2em;
+			border-radius: 12px;
+
+			&-img {
+				border-radius: 12px;
+			}
+
+			&-heading {
+				padding: 0;
+			}
+
+			&-text {
+				padding: 0;
+			}
+
+			&-preparation {
+				margin: 1.6em 0;
+				padding: 1em 2em;
+			}
+
+			&-ingredients {
+				padding: 0;
+			}
+
+			&-instructions {
+				padding: 0;
+			}
+
+			&-table {
+				padding: 0;
+			}
+		}
+	}
+}
